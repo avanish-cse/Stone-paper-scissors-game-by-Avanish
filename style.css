@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vw;
+    font-family: "SUSE Mono", sans-serif;
+    background-color: #f7f3f3;
+
+}
+
+:root {
+    ---praimary-bgc: #D8BFD8;
+    ---accent-color: #FFE4E1;
+    ---secondary-btn: #B0E0E6;
+    ---success-state: #C1E1C1;
+    ---text: #D3D3D3;
+    ---primary-btn: #241E4E;
+    ---extra: #B36A5E;
+    ---teal: #006E90;
+    ----brown: #77625C;
+
+
+}
+
+.heading {
+    background-color: var(---extra);
+    color: #fff;
+    font-family: "SUSE Mono", sans-serif;
+    font-weight: 900;
+    height: 8vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.game {
+    height: 30vmin;
+    display: flex;
+    gap: 2vw;
+}
+
+.choice {
+    width: 30vmin;
+    height: 30vmin;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px var(----brown);
+    transition: ease-in-out;
+
+    img {
+        width: 30vmin;
+    }
+
+}
+
+.choice:hover {
+    scale: 1.02;
+    box-shadow: 0 0 8px #000;
+    box-shadow: 0 0 12px #000;
+    box-shadow: 0 0 08px #000;
+}
+
+.scoreboard {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+}
+
+.score {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.msg-container {
+    font-weight: 800;
+    margin-top: 2rem;
+}
+
+#msg {
+    font-size: 1.5rem;
+    background-color: var(---primary-btn);
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    color: var(---text);
+    display: inline;
+}
+
+#usr-score {
+    color: var(---teal);
+}
+
+#comp-score {
+    color: var(---extra);
+}
+
+@media (width< 560px) {
+    #msg {
+        font-size: 1rem;
+
+    }
+
+    .scoreboard {
+        justify-content: center;
+        
+        .score {
+            font-size: 1.2rem;
+        }
+
+    }
+}
