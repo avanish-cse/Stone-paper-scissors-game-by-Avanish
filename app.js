@@ -19,22 +19,21 @@ const updateScore = () => {
 
 const drawGame = () => {
   msg.innerText = "Game was Draw. Play Again !!";
-      msg.style.backgroundColor = "#241E4E"
-
+  msg.style.backgroundColor = "#241E4E";
 };
 
 // Show winner
 
 const showWinner = (userWin, usrChoice, compChoice) => {
-  if (userWin) {
-    msg.innerText = `You Win ! Your ${usrChoice} beats ${compChoice} `;
-    msg.style.backgroundColor = "#006E90"
-  } else {
-    msg.innerText = `You Lose.. ${compChoice} beats your ${usrChoice}`;
-        msg.style.backgroundColor = "#B36A5E"
-
-  }
-
+  
+    if (userWin) {
+      msg.innerText = `You Win ! Your ${usrChoice} beats ${compChoice} `;
+      msg.style.backgroundColor = "#006E90";
+    } else {
+      msg.innerText = `You Lose.. ${compChoice} beats your ${usrChoice}`;
+      msg.style.backgroundColor = "#B36A5E";
+    }
+  
   userWin ? usrScore++ : compScore++;
   updateScore();
 };
@@ -68,6 +67,3 @@ choices.forEach((choice) => {
     playGame(usrChoice);
   });
 });
-
-
-
